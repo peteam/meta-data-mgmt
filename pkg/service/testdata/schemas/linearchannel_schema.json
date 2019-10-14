@@ -1,0 +1,221 @@
+{
+    "type": "object",
+    "properties": {
+        "urn": {
+            "const": "urn:resource:live:linearchannel"
+        },
+        "id": {
+            "type": "string"
+        },
+        "contentType": {
+            "enum": [
+                "movie",
+                "tvepisode",
+                "musicvideo",
+                "tvseries",
+                "tvseason",
+                "linearchannel",
+                "schedule"
+            ]
+        },
+        "createdDate": {
+            "type": "string",
+            "format": "date"
+        },
+        "createdBy": {
+            "type": "string"
+        },
+        "lastModifyDate": {
+            "type": "string",
+            "format": "date"
+        },
+        "entityStatus": {
+            "enum": [
+                "published",
+                "draft",
+                "archieved",
+                "purged"
+            ]
+        },
+        "providerName": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string"
+        },
+        "titleMetadata": {
+            "type": "object",
+            "properties": {
+                "urn": {
+                    "const": "urn:attrib:live:linearchannel:titlemetadata"
+                },
+                "title": {
+                    "type": "string"
+                },
+                "asset_name": {
+                    "type": "string"
+                },
+                "product": {
+                    "type": "string"
+                },
+                "run_time": {
+                    "type": "string"
+                },
+                "catalog_availibility_window_starttime": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "catalog_availibility_window_endtime": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "release_year": {
+                    "type": "string"
+                },
+                "genres": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "enum": [
+                            "comedy",
+                            "horor",
+                            "documentry",
+                            "thriler",
+                            "action",
+                            "sci-fi"
+                        ]
+                    }
+                },
+                "categories": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "ratings": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "enum": [
+                            "PG-13",
+                            "PG",
+                            "A",
+                            "NC-13"
+                        ]
+                    }
+                },
+                "localized_metadata": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "locale": {
+                                "enum": [
+                                    "en_ca",
+                                    "fr_ca"
+                                ]
+                            },
+                            "title": {
+                                "type": "object",
+                                "properties": {
+                                    "title_brief": {
+                                        "type": "string"
+                                    },
+                                    "long_description": {
+                                        "type": "string"
+                                    },
+                                    "short_description": {
+                                        "type": "string"
+                                    },
+                                    "extra_attrib": {
+                                        "type": "object"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "channel_logos": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "urn": {
+                        "enum": [
+                            "urn:attrib:live:linearchannel:srcasset:image"
+                        ]
+                    },
+                    "state": {
+                        "enum": [
+                            "active",
+                            "archieved",
+                            "purged"
+                        ]
+                    },
+                    "asset_type": {
+                        "enum": [
+                            "IMAGE",
+                            "FEED_FILE",
+                            "MEDIA",
+                            "TRAILER"
+                        ]
+                    },
+                    "url":{
+                        "type": "string"
+                    },
+                    "checksum":{
+                        "type": "string"
+                    },
+                    "contentSize":{
+                        "type": "string"
+                    },
+                    "extra_attrib":{
+                        "type": "object"
+                    }
+                }
+            }
+        },
+        "published_assets": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "urn": {
+                        "enum": [
+                            "urn:attrib:live:linearchannel:pubasset:media"
+                        ]
+                    },
+                    "state": {
+                        "enum": [
+                            "active",
+                            "archieved",
+                            "purged"
+                        ]
+                    },
+                    "asset_type": {
+                        "enum": [
+                            "MEDIA"
+                        ]
+                    },
+                    "url":{
+                        "type": "string"
+                    },
+                    "checksum":{
+                        "type": "string"
+                    },
+                    "contentSize":{
+                        "type": "string"
+                    },
+                    "extra_attrib":{
+                        "type": "object"
+                    }
+                }
+            }
+        }
+       
+    },
+    "additionalProperties": true,
+    "required": []
+}

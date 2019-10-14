@@ -1,0 +1,52 @@
+{
+    "urn": "urn:resource:catalog:tvseries",
+    "id": "PKS00132424144",
+    "contentType": "tvseries",
+    "createdDate": "2001-09-11",
+    "createdBy": "admin",
+    "lastModifyDate": "2001-09-11",
+    "catalogType": "vodcatalog",
+    "entityStatus": "published",
+    "providerName": "hbo.com",
+    "name": "theorville",
+    "titleMetadata": {
+        "urn": "urn:attrib:catalog:tvseries:titlemetadata",
+        "title": "THE Orville",
+        "product": "SVOD",
+        "catalog_availibility_window_starttime": "2018-09-11",
+        "catalog_availibility_window_endtime": "2019-09-11",
+        "release_year": "2018",
+        "genres": [
+            "sci-fi"
+        ],
+        "categories": [
+            "Science"
+        ],
+        "ratings": [
+            "PG-13"
+        ],
+        "localized_metadata": [
+            {
+                "locale": "en_ca",
+                "title": {
+                    "title_brief": "",
+                    "long_description": "",
+                    "short_description": "",
+                    "extra_attrib": {
+                        "key_1": "value_1"
+                    }
+                }
+            }
+        ]
+    },
+    "source_assets": [
+        {
+            "urn": "urn:attrib:catalog:tvseries:srcasset:image",
+            "state": "active",
+            "asset_type": "IMAGE",
+            "url": "http://s3.amazonaws.com/bucket/hbo/PKS001324241644_tvepisode/logo.png",
+            "checksum": ""
+        }
+    ]
+
+}

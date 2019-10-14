@@ -1,0 +1,94 @@
+{
+    "type": "object",
+    "properties": {
+        "urn": {
+            "const": "urn:resource:live:schedule"
+        },
+        "id": {
+            "type": "string"
+        },
+        "contentType": {
+            "enum": [
+                "movie",
+                "tvepisode",
+                "musicvideo",
+                "tvseries",
+                "tvseason",
+                "linearchannel",
+                "schedule"
+            ]
+        },
+        "createdDate": {
+            "type": "string",
+            "format": "date"
+        },
+        "createdBy": {
+            "type": "string"
+        },
+        "lastModifyDate": {
+            "type": "string",
+            "format": "date"
+        },
+        "entityStatus": {
+            "enum": [
+                "published",
+                "draft",
+                "archieved",
+                "purged"
+            ]
+        },
+        "providerName": {
+            "type": "string"
+        },
+        "channelName": {
+            "type": "string"
+        },
+        "startTime": {
+            "type": "string",
+            "format": "date"
+        },
+        "endTime": {
+            "type": "string",
+            "format": "date"
+        },
+        "name": {
+            "type": "string"
+        },
+        "programName":{
+            "type": "string"
+        },
+        "programURN":{
+            "enum": [
+                "urn:resource:catalog:movie",
+                "urn:resource:catalog:tvepisode"
+            ]
+        },
+        "programDetails":{
+            "type": "object",
+            "properties": {
+                "urn": {
+                    "const": "urn:attrib:live:schedule:queryfield:programDetails"
+                },
+                "fieldType": {
+                    "const": "queryField"
+                },
+                "queryOnType": {
+                    "const": "programDetails"
+                },
+                "ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                }
+                
+            }
+
+        }
+
+        
+       
+    },
+    "additionalProperties": true,
+    "required": []
+}

@@ -1,0 +1,72 @@
+{
+    "urn": "urn:resource:catalog:movie",
+    "id": "PKS00132424144",
+    "contentType": "movie",
+    "createdDate": "2001-09-11",
+    "createdBy": "admin",
+    "lastModifyDate": "2001-09-11",
+    "catalogType": "vodcatalog",
+    "entityStatus": "published",
+    "providerName": "hbo.com",
+    "name": "interstellar", 
+    "titleMetadata": {
+        "urn": "urn:attrib:catalog:movie:titlemetadata",
+        "title": "Interstellar",
+        "product": "SVOD",
+        "run_time": "02:49:00",
+        "catalog_availibility_window_starttime": "2018-09-11",
+        "catalog_availibility_window_endtime": "2019-09-11",
+        "release_year": "2014",
+        "genres": [
+            "sci-fi"
+        ],
+        "categories": [
+            "Science"
+        ],
+        "ratings": [
+            "PG-13"
+        ],
+        "localized_metadata": [
+            {
+                "locale": "en_ca",
+                "title": {
+                    "title_brief": "",
+                    "long_description": "",
+                    "short_description": "",
+                    "extra_attrib": {
+                        "key_1": "value_1"
+                    }
+                }
+            }
+        ]
+    },
+    "source_assets": [
+        {
+            "urn": "urn:attrib:catalog:movie:srcasset:feed",
+            "state": "archieved",
+            "asset_type": "FEED_FILE",
+            "url": "http://s3.amazonaws.com/bucket/hbo/PKS00132424144_movie/metadata.xml"
+        },
+        {
+            "urn": "urn:attrib:catalog:movie:srcasset:image",
+            "state": "active",
+            "asset_type": "IMAGE",
+            "url": "http://s3.amazonaws.com/bucket/hbo/PKS00132424144_movie/logo.png",
+            "checksum": ""
+        }
+    ],
+    "cast": [
+        {
+            "urn": "urn:attrib:catalog:movie:cast",
+            "name": "XYZ"
+        }
+    ],
+    "published_assets": [
+        {
+            "urn": "urn:attrib:catalog:movie:pubasset:media",
+            "state": "active",
+            "asset_type": "MEDIA",
+            "url": "http://s3.amazonaws.com/bucket/hbo/PKS00132424144_movie/master.m3u8"
+        }
+    ]
+}

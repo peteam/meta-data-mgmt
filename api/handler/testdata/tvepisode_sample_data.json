@@ -1,0 +1,79 @@
+{
+    "urn": "urn:resource:catalog:tvepisode",
+    "id": "PKS001324241644",
+    "contentType": "tvepisode",
+    "createdDate": "2001-09-11",
+    "createdBy": "admin",
+    "lastModifyDate": "2001-09-11",
+    "catalogType": "vodcatalog",
+    "entityStatus": "published",
+    "providerName": "hbo.com",
+    "name": "theorville_s2_e2",
+    "titleMetadata": {
+        "urn": "urn:attrib:catalog:tvepisode:titlemetadata",
+        "title": "Primal Urges",
+        "product": "SVOD",
+        "run_time": "02:49:00",
+        "catalog_availibility_window_starttime": "2018-09-11",
+        "catalog_availibility_window_endtime": "2019-09-11",
+        "release_year": "2018",
+        "genres": [
+            "sci-fi"
+        ],
+        "categories": [
+            "Science"
+        ],
+        "ratings": [
+            "PG-13"
+        ],
+        "localized_metadata": [
+            {
+                "locale": "en_ca",
+                "title": {
+                    "title_brief": "",
+                    "long_description": "",
+                    "short_description": "",
+                    "extra_attrib": {
+                        "key_1": "value_1"
+                    }
+                }
+            }
+        ],
+        "source_assets": [
+            {
+                "urn": "urn:attrib:catalog:tvepisode:srcasset:feed",
+                "state": "archieved",
+                "asset_type": "FEED_FILE",
+                "url": "http://s3.amazonaws.com/bucket/hbo/PKS001324241644_tvepisode/metadata.xml"
+            },
+            {
+                "urn": "urn:attrib:catalog:tvepisode:srcasset:image",
+                "state": "active",
+                "asset_type": "IMAGE",
+                "url": "http://s3.amazonaws.com/bucket/hbo/PKS001324241644_tvepisode/logo.png",
+                "checksum": ""
+            }
+        ]
+    },
+    "cast": [
+        {
+            "urn": "urn:attrib:catalog:tvepisode:cast",
+            "name": "XYZ"
+        }
+    ],
+    "published_assets": [
+        {
+            "urn": "urn:attrib:catalog:tvepisode:pubasset:media",
+            "state": "active",
+            "asset_type": "MEDIA",
+            "url": "http://s3.amazonaws.com/bucket/hbo/PKS001324241644_tvepisode/master.m3u8"
+        }
+    ],
+    "show_details":{
+        "urn":"urn:attrib:catalog:tvepisode:showdetail",
+        "series_title":"THE ORVILLE",
+        "season_title":"THE ORVILLE: SEASON 2",
+        "season_number":2,
+        "episode_number":2
+    }
+}

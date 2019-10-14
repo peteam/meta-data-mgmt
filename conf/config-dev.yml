@@ -1,0 +1,65 @@
+# ------ SYSTEM GENERATED: DO NOT MODIFY -----
+profile: dev
+
+application:
+  name: METADATAMGMT
+  source:
+    api:
+      metadatamgmt:
+        add: MW-DATASERVICE-HTTP-01
+        list: MW-DATASERVICE-HTTP-03
+        count: MW-DATASERVICE-HTTP-04
+        schema: MW-DATASERVICE-HTTP-10
+        searchByFields: MW-DATASERVICE-HTTP-07
+
+http:
+  port: 8080
+  readTimeout: 5
+  writeTimeout: 10
+  maxHeaderBytes: 4096
+
+# ------ SYSTEM GENERATED: DO NOT MODIFY -----
+logging:
+  logfile:
+    access:
+      loglevel: DEBUG
+      path: ./log/
+      name: access.log
+    service:
+      loglevel: DEBUG
+      path: ./log/
+      name: service.log
+    bootstrap:
+      loglevel: DEBUG
+      path: ./log/
+      name: bootstrap.log
+
+# ------ SYSTEM GENERATED: DO NOT MODIFY -----
+database:
+  couchbase:
+    enable: true
+    connectionstring: couchbase://sdd-cicbase-01
+    #connectionstring: couchbase:localhost
+    bucket: vod-content
+    username: Administrator
+    password: rG\%?QZ1KNP8
+    #username: admin
+    #password: monitor
+    index:
+      metadatamgmt:
+        resourceType:
+          timestamp:            
+            #desc: resource-primary-index
+            desc: '#primary'
+
+# ---- ADD YOUR CUSTOM CONFIGURATIONS BELOW -----
+service:
+  test: value
+  error:
+    description:
+        missingRequiredField: Missing Required Field
+        invalidJSON:  Invalid JSON
+        itemNotFound: Item not found
+schema:
+  json:
+    location: "conf/schemas"

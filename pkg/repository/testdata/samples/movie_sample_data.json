@@ -1,0 +1,8 @@
+{
+    "urn": "urn:resource:vod:movie",
+    "id": "id",
+    "contentType": "movie",
+    "entityStatus":"published",
+    "providerName":"Provider Name HBO",
+    "name": "Game of Throne"
+}

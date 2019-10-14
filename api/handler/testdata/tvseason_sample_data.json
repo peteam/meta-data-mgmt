@@ -1,0 +1,56 @@
+{
+    "urn": "urn:resource:catalog:tvseason",
+    "id": "PKS00132424144",
+    "contentType": "tvseason",
+    "createdDate": "2001-09-11",
+    "createdBy": "admin",
+    "lastModifyDate": "2001-09-11",
+    "catalogType": "vodcatalog",
+    "entityStatus": "published",
+    "providerName": "hbo.com",
+    "name": "theorville_s2",
+    "titleMetadata": {
+        "urn": "urn:attrib:catalog:tvseason:titlemetadata",
+        "title": "THE ORVILLE: SEASON 2",
+        "product": "SVOD",
+        "release_year": "2018",
+        "genres": [
+            "sci-fi"
+        ],
+        "categories": [
+            "Science"
+        ],
+        "ratings": [
+            "PG-13"
+        ],
+        "localized_metadata": [
+            {
+                "locale": "en_ca",
+                "title": {
+                    "title_brief": "",
+                    "long_description": "",
+                    "short_description": "",
+                    "extra_attrib": {
+                        "key_1": "value_1"
+                    }
+                }
+            }
+        ]
+    },
+    "source_assets": [
+        {
+            "urn": "urn:attrib:catalog:tvseason:srcasset:image",
+            "state": "active",
+            "asset_type": "IMAGE",
+            "url": "http://s3.amazonaws.com/bucket/hbo/PKS001324241644_tvseason/logo.png",
+            "checksum": ""
+        }
+    ],
+    "show_details":{
+        "urn": "urn:attrib:catalog:tvseason:showdetail",
+        "series_title": "THE ORVILLE",
+        "season_title": "THE ORVILLE: SEASON 2",
+        "season_number": 2
+    }
+
+}

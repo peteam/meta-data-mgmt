@@ -1,0 +1,243 @@
+{
+    "type": "object",
+    "properties": {
+        "urn": {
+            "const": "urn:resource:catalog:tvseason"
+        },
+        "id": {
+            "type": "string"
+        },
+        "contentType": {
+            "enum": [
+                "movie",
+                "tvepisode",
+                "musicvideo",
+                "tvseries",
+                "tvseason",
+                "linearchannel",
+                "schedule"
+            ]
+        },
+        "createdDate": {
+            "type": "string",
+            "format": "date"
+        },
+        "createdBy": {
+            "type": "string"
+        },
+        "lastModifyDate": {
+            "type": "string",
+            "format": "date"
+        },
+        "entityStatus": {
+            "enum": [
+                "published",
+                "draft",
+                "archieved",
+                "purged"
+            ]
+        },
+        "providerName": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string"
+        },
+        "show_details":{
+            "type": "object",
+            "properties": {
+                "urn": {
+                    "const": "urn:attrib:catalog:tvseason:showdetail"
+                },
+                "series_title": {
+                    "type": "string"
+                },
+                "season_title": {
+                    "type": "string"
+                },
+                "season_number": {
+                    "type": "integer"
+                }
+            }
+
+        },
+        "titleMetadata": {
+            "type": "object",
+            "properties": {
+                "urn": {
+                    "const": "urn:attrib:catalog:tvseason:titlemetadata"
+                },
+                "title": {
+                    "type": "string"
+                },
+                "asset_name": {
+                    "type": "string"
+                },
+                "product": {
+                    "type": "string"
+                },
+                "run_time": {
+                    "type": "string"
+                },
+                "catalog_availibility_window_starttime": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "catalog_availibility_window_endtime": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "release_year": {
+                    "type": "string"
+                },
+                "genres": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "enum": [
+                            "comedy",
+                            "horor",
+                            "documentry",
+                            "thriler",
+                            "action",
+                            "sci-fi"
+                        ]
+                    }
+                },
+                "categories": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "ratings": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "enum": [
+                            "PG-13",
+                            "PG",
+                            "A",
+                            "NC-13"
+                        ]
+                    }
+                },
+                "localized_metadata": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "locale": {
+                                "enum": [
+                                    "en_ca",
+                                    "fr_ca"
+                                ]
+                            },
+                            "title": {
+                                "type": "object",
+                                "properties": {
+                                    "title_brief": {
+                                        "type": "string"
+                                    },
+                                    "long_description": {
+                                        "type": "string"
+                                    },
+                                    "short_description": {
+                                        "type": "string"
+                                    },
+                                    "extra_attrib": {
+                                        "type": "object"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "source_assets": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "urn": {
+                        "enum": [
+                            "urn:attrib:catalog:tvseason:srcasset:feed",
+                            "urn:attrib:catalog:tvseason:srcasset:image",
+                            "urn:attrib:catalog:tvseason:srcasset:trailer"
+                        ]
+                    },
+                    "state": {
+                        "enum": [
+                            "active",
+                            "archieved",
+                            "purged"
+                        ]
+                    },
+                    "asset_type": {
+                        "enum": [
+                            "IMAGE",
+                            "FEED_FILE",
+                            "MEDIA",
+                            "TRAILER"
+                        ]
+                    },
+                    "url":{
+                        "type": "string"
+                    },
+                    "checksum":{
+                        "type": "string"
+                    },
+                    "contentSize":{
+                        "type": "string"
+                    },
+                    "extra_attrib":{
+                        "type": "object"
+                    }
+                }
+            }
+        },
+       "cast": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "urn": {
+                        "const": "urn:attrib:catalog:tvseason:cast"
+                    },
+                    "name":{
+                        "type": "string"
+                    }
+
+
+                }
+
+            }
+
+        },
+        "episodes":{
+            "type": "object",
+            "properties": {
+                "urn": {
+                    "const": "urn:attrib:catalog:tvseason:queryfield:episodes"
+                },
+                "fieldType": {
+                    "const": "queryField"
+                },
+                "queryOnType": {
+                    "const": "tvepisode"
+                },
+                "ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                }
+                
+            }
+
+        }
+    },
+    "additionalProperties": true,
+    "required": []
+}
