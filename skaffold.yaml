@@ -2,7 +2,7 @@ apiVersion: skaffold/v1beta2
 kind: Config
 build:
   artifacts:
-  - image: peteam/meta-data-mgmt
+  - image: platform-engineering/metadata-mgmt-services
     context: .
     docker: {}
   tagPolicy:
@@ -21,8 +21,8 @@ profiles:
   deploy:
     helm:
       releases:
-      - name: meta-data-mgmt
-        chartPath: charts/meta-data-mgmt
+      - name: metadata-mgmt-services
+        chartPath: charts/metadata-mgmt-services
         setValueTemplates:
           image.repository: '{{.DOCKER_REGISTRY}}/{{.IMAGE_NAME}}'
           image.tag: '{{.DIGEST_HEX}}'

@@ -1,4 +1,5 @@
 FROM scratch
 EXPOSE 8080
-ENTRYPOINT ["/meta-data-mgmt"]
+ENTRYPOINT ["/metadata-mgmt-services"]
 COPY ./bin/ /
+COPY ./conf/ /conf
